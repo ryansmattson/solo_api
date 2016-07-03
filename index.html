@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Solo API</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheet.css"charset="utf-8">
+    <script   src="https://code.jquery.com/jquery-3.0.0.min.js"   integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="page-header">Solo API Challenge <small> ryan mattson</small></h1>
+    </header>
+    <main>
+
+      <div class="menu">
+        <span class="label label-info">Favorites:</span>
+        <div class="favorite-movies">
+          <article id="movie1">
+          </article>
+          <article id="movie2">
+          </article>
+          <article id="movie3">
+          </article>
+        </div>
+      </div>
+
+      <hr></hr>
+
+      <div class="menu">
+        <span class="label label-info">Search:</span>
+          <div class="search-movies">
+            <form>
+              <div class="form-group">
+                <label for="movie-title">Movie Title:</label>
+                <input type="text" name="movie-title" class="form-control" id="movie-title" placeholder="Movie Title">
+              </div>
+              <div class="form-group">
+                <label for="movie-year">Year:</label>
+                <input type="text" name="movie-year" class="form-control" id="movie-year" placeholder="Year">
+              </div>
+              <input type="submit" class="btn btn-default" value="Search">
+            </form>
+
+            <article id="searched-movie"></article>
+
+          </div>
+
+      </div>
+
+      <hr></hr>
+
+      <div class="menu">
+        <span class="label label-info">Random:</span>
+        <div class="random-movies">
+        </div>
+      </div>
+
+    </main>
+  </body>
+</html>
