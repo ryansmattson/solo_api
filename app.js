@@ -1,5 +1,7 @@
 $(function(){
 
+
+//get first favorite movie and append to DOM
 $.ajax({
     url: 'http://www.omdbapi.com/?t=the+sandlot&y=&plot=short&r=json',
   }).then(function(data){
@@ -15,6 +17,7 @@ $.ajax({
 })
 
 
+//get second favorite movie and append to DOM
 $.ajax({
     url: 'http://www.omdbapi.com/?t=Dumb+%26+Dumber&y=1994&plot=short&r=json',
   }).then(function(data){
@@ -30,6 +33,7 @@ $.ajax({
 })
 
 
+//get third favorite movie and append to DOM
 $.ajax({
     url: 'http://www.omdbapi.com/?t=anchorman&y=2004&plot=short&r=json',
   }).then(function(data){
@@ -44,15 +48,13 @@ $.ajax({
 })
 
 
-
+//slidToggle menu buttons
 $('main').on('click', '.label-info', function(){
   $(this).closest('.menu').find('div').slideToggle();
 })
 
 
-//FINISH GETTING SEARCH BAR AND RESULTS
-//FINISH GETTING SEARCH BAR AND RESULTS
-//FINISH GETTING SEARCH BAR AND RESULTS
+//Get results from serach.  Only works if you have exact title and year.  NEEDS TO BE FINISHED.
 $('form').on('submit', function(event){
   event.preventDefault();
   var tempTitle = $('#movie-title').val();
@@ -60,10 +62,6 @@ $('form').on('submit', function(event){
   var tempURL = 'http://www.omdbapi.com/?t=' + tempTitle + '&y=' + tempYear + '&plot=short&r=json';
 
   console.log(tempURL);
-
-  // var c = $('#search-by-title-form').serialize();
-  //             var d = 'http://www.omdbapi.com/?' + c;
-  //             url: '/?' + c,
 
   $.ajax({
       url: '' + tempURL,
@@ -83,21 +81,6 @@ $('form').on('submit', function(event){
   console.log(tempTitle, tempYear);
 
 })
-
-
-
-// var movieArray = [];
-//
-// $.ajax({
-//     url: 'http://www.omdbapi.com/?t=the+sandlot&y=&plot=short&r=json',
-//     success: function(data){
-//       movieArray.push(data);
-//       console.log(movieArray);
-//     }
-// });
-//
-// console.log(movieArray);
-
 
 
 //END
